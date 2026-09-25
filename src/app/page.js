@@ -1,9 +1,21 @@
 "use client";
 
 import { FaReact, FaPython, FaUnity, FaAndroid } from "react-icons/fa";
-import { SiFlask, SiTailwindcss, SiKotlin, SiDotnet } from "react-icons/si";
+import {
+  SiFlask,
+  SiTailwindcss,
+  SiKotlin,
+  SiDotnet,
+  SiNextdotjs,
+  SiTypescript,
+  SiPostgresql,
+  SiPrisma,
+  SiDocker,
+} from "react-icons/si";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+
+import AnimatedBackground from "../components/AnimatedBackground";
 
 export default function Home() {
 
@@ -58,9 +70,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen text-white text-center p-10 relative overflow-hidden bg-gradient-to-br from-black via-zinc-900 to-black">
-      
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent)] pointer-events-none"></div>
-
+      <AnimatedBackground />
       {/* HERO */}
       <section className="mb-16">
         <h1 className="text-4xl font-bold mb-4">
@@ -134,6 +144,57 @@ export default function Home() {
         </h2>
 
         <div className="grid gap-6 md:grid-cols-2">
+          {/* TRATTORIA BELLA LUNA */}
+<div className={`${cardStyle} md:col-span-2`}>
+  <h3 className="text-2xl font-bold mb-2">
+    Trattoria Bella Luna
+  </h3>
+
+  <div className="w-full max-w-5xl mx-auto mb-8">
+    <div className="aspect-video rounded-2xl overflow-hidden bg-black border border-zinc-800">
+      <img
+        src="/images/bella-luna.png"
+        alt="Trattoria Bella Luna restaurant website"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+
+  <p className="text-gray-400 mb-4 max-w-3xl mx-auto">
+    Full-stack restaurant platform with a database-driven website,
+    online reservations, admin dashboard, authentication, content
+    management and production deployment.
+  </p>
+
+  <div className="flex justify-center gap-6 mb-6 text-2xl flex-wrap">
+    <SiNextdotjs className="hover:scale-125 hover:text-white transition" />
+    <SiTypescript className="hover:scale-125 hover:text-blue-400 transition" />
+    <SiTailwindcss className="hover:scale-125 hover:text-sky-400 transition" />
+    <SiPostgresql className="hover:scale-125 hover:text-blue-300 transition" />
+    <SiPrisma className="hover:scale-125 hover:text-gray-300 transition" />
+    <SiDocker className="hover:scale-125 hover:text-blue-400 transition" />
+  </div>
+
+  <div className="flex justify-center gap-6">
+    <a
+      href="https://trattoria-bella-luna.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={buttonStyle}
+    >
+      Live Website
+    </a>
+
+    <a
+      href="https://github.com/X1Alpha29/trattoria-bella-luna"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={buttonStyle}
+    >
+      View Project
+    </a>
+  </div>
+</div>
 
           {/* TASKPILOT */}
           <div className={`${cardStyle} md:col-span-2`}>
@@ -224,14 +285,6 @@ export default function Home() {
           </div>
 
         </div>
-
-        {/* CV */}
-        <section className="mt-20">
-          <h2 className="text-2xl font-semibold mb-4">My CV</h2>
-          <a href="/cv.pdf" target="_blank" className={buttonStyle}>
-            Download CV
-          </a>
-        </section>
       </section>
 
       {/* FULLSCREEN */}
