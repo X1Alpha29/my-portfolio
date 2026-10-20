@@ -804,209 +804,154 @@ className="object-cover transition duration-300 ease-out group-hover/image:scale
 
           
           {/* NORTHSTAR PROPERTY SERVICES */}
-          <TiltCard className="group relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-zinc-950/90 shadow-[0_20px_80px_rgba(0,0,0,0.4)]">
-            <div className="pointer-events-none absolute -right-32 -top-28 h-80 w-80 rounded-full bg-cyan-400/[0.06] blur-3xl transition duration-700 group-hover:bg-cyan-400/[0.10]" />
+<TiltCard className="group relative overflow-hidden rounded-[28px] border border-white/[0.08] bg-zinc-950/90 shadow-[0_20px_80px_rgba(0,0,0,0.4)]">
+  <div className="pointer-events-none absolute -right-32 -top-28 h-80 w-80 rounded-full bg-cyan-400/[0.06] blur-3xl transition duration-700 group-hover:bg-cyan-400/[0.10]" />
 
-            <div className="relative z-10 p-6 sm:p-8 lg:p-9">
-              <div className="mb-7 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                <div>
-                  <div className="mb-3 flex flex-wrap gap-2">
-                    <span className="rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300">
-                      Business Website
-                    </span>
-                    <span className="rounded-full border border-violet-400/20 bg-violet-400/[0.07] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-violet-300">
-                      Admin Demo
-                    </span>
-                  </div>
+  <div className="relative z-10 p-6 sm:p-8 lg:p-9">
+    <div className="mb-7 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+      <div>
+        <div className="mb-3 flex flex-wrap gap-2">
+          <span className="rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            Business Website
+          </span>
 
-                  <h3 className="text-2xl font-bold tracking-[-0.04em] text-white sm:text-3xl">
-                    Northstar Property Services
-                  </h3>
+          <span className="rounded-full border border-violet-400/20 bg-violet-400/[0.07] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-violet-300">
+            Admin Demo
+          </span>
+        </div>
 
-                  <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-500 sm:text-base">
-                    A responsive property maintenance and refurbishment
-                    website, featuring service information, a quote-request
-                    workflow with photo uploads, and a compact admin
-                    dashboard demonstration.
-                  </p>
-                </div>
+        <h3 className="text-2xl font-bold tracking-[-0.04em] text-white sm:text-3xl">
+          Northstar Property Services
+        </h3>
 
-                <div className="shrink-0 rounded-2xl border border-white/[0.06] bg-white/[0.025] px-4 py-3">
-                  <p className="text-[9px] uppercase tracking-[0.2em] text-gray-600">
-                    Project Type
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-gray-300">
-                    Full-Stack Web
-                  </p>
-                </div>
+        <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-500 sm:text-base">
+          A responsive property maintenance and refurbishment
+          website, featuring service information, a quote-request
+          workflow with photo uploads, and a compact admin
+          dashboard demonstration.
+        </p>
+      </div>
+
+      <div className="shrink-0 rounded-2xl border border-white/[0.06] bg-white/[0.025] px-4 py-3">
+        <p className="text-[9px] uppercase tracking-[0.2em] text-gray-600">
+          Project Type
+        </p>
+
+        <p className="mt-1 text-sm font-medium text-gray-300">
+          Full-Stack Web
+        </p>
+      </div>
+    </div>
+
+    <div className="grid gap-7 lg:grid-cols-[1.45fr_0.8fr] lg:items-center">
+      {/* Actual website screenshot */}
+      <div className="group/media relative overflow-hidden rounded-[22px] border border-white/[0.09] bg-black shadow-2xl">
+        <div className="relative aspect-[16/9] overflow-hidden">
+          <Image
+            src="/images/northstar-property-services.png"
+            alt="Screenshot of the Northstar Property Services homepage"
+            fill
+            sizes="(max-width: 1024px) 100vw, 60vw"
+            className="object-cover object-top transition duration-700 group-hover/media:scale-[1.025]"
+          />
+
+          <div className="absolute bottom-4 left-4 z-10">
+            <span className="rounded-full border border-white/15 bg-black/50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-md">
+              Live Website
+            </span>
+          </div>
+        </div>
+
+        <div className="border-t border-white/[0.08] bg-zinc-950 px-4 py-3">
+          <p className="text-[9px] font-medium uppercase tracking-[0.16em] text-gray-500">
+            Northstar Property Services · Homepage
+          </p>
+        </div>
+      </div>
+
+      {/* Features and technology */}
+      <div className="flex h-full flex-col justify-between gap-6">
+        <div>
+          <p className="mb-3 text-[9px] font-semibold uppercase tracking-[0.22em] text-gray-600">
+            Technology
+          </p>
+
+          <div className="flex flex-wrap gap-2">
+            {[
+              ["Next.js", SiNextdotjs],
+              ["TypeScript", SiTypescript],
+              ["Tailwind CSS", SiTailwindcss],
+              ["PostgreSQL", SiPostgresql],
+              ["Prisma", SiPrisma],
+              ["Docker", SiDocker],
+            ].map(([name, Icon]) => (
+              <div
+                key={name}
+                className="flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.025] px-3 py-2 text-xs text-gray-500 transition duration-300 hover:border-cyan-400/20 hover:text-white"
+              >
+                <Icon className="text-sm text-gray-600" />
+                {name}
               </div>
+            ))}
+          </div>
 
-              <div className="grid gap-7 lg:grid-cols-[1.45fr_0.8fr] lg:items-center">
-                {/* Stylised website preview */}
-                <div className="overflow-hidden rounded-[22px] border border-white/[0.09] bg-white shadow-2xl">
-                  <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-3">
-                    <span className="h-2 w-2 rounded-full bg-red-400" />
-                    <span className="h-2 w-2 rounded-full bg-amber-400" />
-                    <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                    <div className="ml-3 min-w-0 flex-1 truncate rounded-md border border-slate-200 bg-white px-3 py-1 text-left text-[9px] text-slate-400">
-                      Northstar Property Services
-                    </div>
-                  </div>
+          <div className="mt-6 space-y-3">
+            {[
+              "Responsive service-led website",
+              "Quote form and photo uploads",
+              "Form validation and upload handling",
+              "Compact admin dashboard UI",
+              "Full-size photo inspection viewer",
+            ].map((feature) => (
+              <div key={feature} className="flex items-start gap-3">
+                <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] text-[9px] text-cyan-300">
+                  ✓
+                </span>
 
-                  <div className="p-4 text-left sm:p-6">
-                    <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-4">
-                      <div>
-                        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                          Northstar
-                        </p>
-                        <p className="text-sm font-bold tracking-tight text-slate-950">
-                          PROPERTY SERVICES
-                        </p>
-                      </div>
-                      <span className="rounded-lg bg-slate-950 px-3 py-2 text-[9px] font-semibold text-white">
-                        Request a quote
-                      </span>
-                    </div>
-
-                    <div className="grid gap-5 py-6 sm:grid-cols-[1.15fr_0.85fr] sm:items-center">
-                      <div>
-                        <p className="text-[8px] font-bold uppercase tracking-[0.18em] text-cyan-700">
-                          Property care made simple
-                        </p>
-                        <p className="mt-2 text-xl font-bold leading-tight tracking-tight text-slate-950 sm:text-2xl">
-                          Reliable repairs.
-                          <br />
-                          Thoughtful service.
-                        </p>
-                        <p className="mt-2 text-[10px] leading-5 text-slate-500">
-                          Maintenance and refurbishment for homes and
-                          properties across West London.
-                        </p>
-                      </div>
-
-                      <div className="relative flex min-h-36 items-end overflow-hidden rounded-xl bg-gradient-to-br from-slate-300 via-slate-500 to-slate-800 p-3">
-                        <div className="absolute right-3 top-3 h-16 w-16 rounded-full bg-white/20 blur-2xl" />
-                        <div className="relative grid w-full grid-cols-2 gap-2">
-                          <div className="h-16 rounded-t-lg border border-white/30 bg-white/20 backdrop-blur-sm" />
-                          <div className="h-16 rounded-t-lg border border-white/30 bg-white/10 backdrop-blur-sm" />
-                          <div className="col-span-2 flex items-center justify-between rounded-lg border border-white/20 bg-slate-950/55 px-3 py-2 text-white">
-                            <span className="text-[8px] font-semibold uppercase tracking-wide">
-                              Home maintenance
-                            </span>
-                            <span className="text-xs">↗</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-2 border-t border-slate-100 pt-4">
-                      {[
-                        ["01", "Repairs"],
-                        ["02", "Maintenance"],
-                        ["03", "Refurbishment"],
-                      ].map(([number, label]) => (
-                        <div
-                          key={number}
-                          className="rounded-lg border border-slate-100 bg-slate-50 p-2 sm:p-3"
-                        >
-                          <p className="text-[8px] font-bold text-cyan-700">
-                            {number}
-                          </p>
-                          <p className="mt-1 text-[9px] font-semibold text-slate-700">
-                            {label}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="border-t border-slate-200 bg-slate-50 px-4 py-2.5">
-                    <p className="text-[8px] font-medium uppercase tracking-[0.16em] text-slate-400">
-                      Stylised project preview
-                    </p>
-                  </div>
-                </div>
-
-                {/* Features and technology */}
-                <div className="flex h-full flex-col justify-between gap-6">
-                  <div>
-                    <p className="mb-3 text-[9px] font-semibold uppercase tracking-[0.22em] text-gray-600">
-                      Technology
-                    </p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        ["Next.js", SiNextdotjs],
-                        ["TypeScript", SiTypescript],
-                        ["Tailwind CSS", SiTailwindcss],
-                        ["PostgreSQL", SiPostgresql],
-                        ["Prisma", SiPrisma],
-                        ["Docker", SiDocker],
-                      ].map(([name, Icon]) => (
-                        <div
-                          key={name}
-                          className="flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.025] px-3 py-2 text-xs text-gray-500 transition duration-300 hover:border-cyan-400/20 hover:text-white"
-                        >
-                          <Icon className="text-sm text-gray-600" />
-                          {name}
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-6 space-y-3">
-                      {[
-                        "Responsive service-led website",
-                        "Quote form and photo uploads",
-                        "Form validation and upload handling",
-                        "Compact admin dashboard UI",
-                        "Full-size photo inspection viewer",
-                      ].map((feature) => (
-                        <div key={feature} className="flex items-start gap-3">
-                          <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] text-[9px] text-cyan-300">
-                            ✓
-                          </span>
-                          <p className="text-xs leading-5 text-gray-400">
-                            {feature}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-
-                    <p className="mt-5 rounded-xl border border-violet-400/10 bg-violet-400/[0.04] p-3 text-[10px] leading-5 text-gray-500">
-                      The admin workspace is a demonstration using fictional
-                      enquiries. Status changes are not persisted.
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-                    <a
-                      href="https://northstar-property-services-izgq.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/button inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-400/25 bg-cyan-400/[0.08] px-5 py-3 text-sm font-semibold text-cyan-300 transition duration-300 hover:border-cyan-300/50 hover:bg-cyan-400/[0.14] hover:text-white"
-                    >
-                      Live Website
-                      <span className="transition duration-300 group-hover/button:translate-x-1">
-                        ↗
-                      </span>
-                    </a>
-
-                    <a
-                      href="https://github.com/X1Alpha29/northstar-property-services"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/button inline-flex items-center justify-center gap-3 rounded-xl border border-white/[0.08] bg-white/[0.025] px-5 py-3 text-sm font-semibold text-gray-300 transition duration-300 hover:border-white/[0.16] hover:bg-white/[0.06] hover:text-white"
-                    >
-                      View Source
-                      <span className="transition duration-300 group-hover/button:translate-x-1">
-                        ↗
-                      </span>
-                    </a>
-                  </div>
-                </div>
+                <p className="text-xs leading-5 text-gray-400">
+                  {feature}
+                </p>
               </div>
-            </div>
-          </TiltCard>     
+            ))}
+          </div>
+
+          <p className="mt-5 rounded-xl border border-violet-400/10 bg-violet-400/[0.04] p-3 text-[10px] leading-5 text-gray-500">
+            The admin workspace is a demonstration using fictional
+            enquiries. Status changes are not persisted.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+          <a
+            href="https://northstar-property-services-izgq.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/button inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-400/25 bg-cyan-400/[0.08] px-5 py-3 text-sm font-semibold text-cyan-300 transition duration-300 hover:border-cyan-300/50 hover:bg-cyan-400/[0.14] hover:text-white"
+          >
+            Live Website
+
+            <span className="transition duration-300 group-hover/button:translate-x-1">
+              ↗
+            </span>
+          </a>
+
+          <a
+            href="https://github.com/X1Alpha29/northstar-property-services"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/button inline-flex items-center justify-center gap-3 rounded-xl border border-white/[0.08] bg-white/[0.025] px-5 py-3 text-sm font-semibold text-gray-300 transition duration-300 hover:border-white/[0.16] hover:bg-white/[0.06] hover:text-white"
+          >
+            View Source
+
+            <span className="transition duration-300 group-hover/button:translate-x-1">
+              ↗
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</TiltCard>
 
 
           {/* ====================================================== */}
